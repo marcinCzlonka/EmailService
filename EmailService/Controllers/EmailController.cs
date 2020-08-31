@@ -1,47 +1,53 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
+using EmailService.Common.DataClasses;
+using EmailService.Database.Queries.Emails;
+using EmailService.Database.Requests.Emails;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace EmailService.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class EmailController : ControllerBase
+    public class EmailController : BaseController
     {
-        // GET: api/<EmailController>
-        [HttpGet]
-        public IEnumerable<string> Get()
+        // GET api/<EmailController>/5
+        [HttpGet("{id}")]
+        public async Task<IActionResult> Get(int id)
         {
-            return new[] { "value1", "value2" };
+            return Ok(await Mediator.Send(new GetEmailDetailsQuery()));
         }
 
         // GET api/<EmailController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+        [HttpGet]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<IActionResult> GetAll()
         {
-            return "value";
+            return Ok(await Mediator.Send(new GetAllEmailsQuery()));
         }
 
         // POST api/<EmailController>
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [HttpPost]
-        public void Post([FromBody] string value)
+        public async Task<IActionResult> Create([FromBody] CreateEmailRequest command)
         {
+            await Mediator.Send(command);
+            return Ok();
         }
 
         // PUT api/<EmailController>/5
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public async Task<IActionResult> Send([FromBody] SendEmailRequest command)
         {
-        }
-
-        // DELETE api/<EmailController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
+            await Mediator.Send(command);
+            return Ok();
         }
     }
 }

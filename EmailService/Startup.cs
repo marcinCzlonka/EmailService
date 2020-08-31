@@ -2,6 +2,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using EmailService.Common;
+using EmailService.Common.DataClasses;
+using EmailService.Common.Interfaces;
+using EmailService.Database;
+using EmailService.Database.Entities;
+using EmailService.Database.Queries.Emails;
+using EmailService.Database.Requests.Emails;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -26,8 +34,12 @@ namespace EmailService
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddDbContext<DbContext>(options =>
+            services.AddDbContext<ServiceContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddMediatR(typeof(Startup));
+            services.AddSingleton<IEmailSender,EmailSender>();
+            services.AddSingleton<IMapper<CreateEmailRequest, Email>, CreateEmailRequestToEmailMapper>();
+            services.AddSingleton<IMapper<SendEmailRequest, Email>, SendEmailRequestToEmailMapper>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

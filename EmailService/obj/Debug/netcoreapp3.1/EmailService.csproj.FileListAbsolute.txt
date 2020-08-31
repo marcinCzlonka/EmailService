@@ -55,6 +55,12 @@ C:\Users\maco\source\repos\EmailMicroservice\EmailService\bin\Debug\netcoreapp3.
 C:\Users\maco\source\repos\EmailMicroservice\EmailService\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\maco\source\repos\EmailMicroservice\EmailService\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\maco\source\repos\EmailMicroservice\EmailService\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\maco\source\repos\EmailMicroservice\EmailService\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\maco\source\repos\EmailMicroservice\EmailService\bin\Debug\netcoreapp3.1\MediatR.dll
+C:\Users\maco\source\repos\EmailMicroservice\EmailService\bin\Debug\netcoreapp3.1\MediatR.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\maco\source\repos\EmailMicroservice\EmailService\bin\Debug\netcoreapp3.1\MailKit.dll
+C:\Users\maco\source\repos\EmailMicroservice\EmailService\bin\Debug\netcoreapp3.1\MimeKit.dll
+C:\Users\maco\source\repos\EmailMicroservice\EmailService\bin\Debug\netcoreapp3.1\NETCore.MailKit.dll
+C:\Users\maco\source\repos\EmailMicroservice\EmailService\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
 C:\Users\maco\source\repos\EmailMicroservice\EmailService\obj\Debug\netcoreapp3.1\EmailService.csproj.CoreCompileInputs.cache
 C:\Users\maco\source\repos\EmailMicroservice\EmailService\obj\Debug\netcoreapp3.1\EmailService.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\maco\source\repos\EmailMicroservice\EmailService\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
