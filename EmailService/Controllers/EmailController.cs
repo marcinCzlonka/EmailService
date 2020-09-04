@@ -13,9 +13,12 @@ namespace EmailService.Controllers
     {
         // GET api/<EmailController>/5
         [HttpGet("{id}")]
-        public async Task<IActionResult> Get([FromBody] GetEmailDetailsQuery query)
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<IActionResult> Get(int id)
         {
-            return Ok(await Mediator.Send(query));
+            return Ok(await Mediator.Send(new GetEmailDetailsQuery(){ Id = id}));
         }
 
         // GET api/<EmailController>/5

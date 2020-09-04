@@ -31,7 +31,10 @@ namespace EmailService.Database
 
         public async Task<int> CreateEmail(Email email, CancellationToken cancellationToken)
         {
-            context.Add(email);
+            context.EmailAddresses.Add(email.Sender);
+            context.EmailAddresses.AddRange(email.Recipients);
+            context.Attachments.Add(email.Attachment);
+            context.Emails.Add(email);
             await context.SaveChangesAsync(cancellationToken);
             return email.Id;
         }

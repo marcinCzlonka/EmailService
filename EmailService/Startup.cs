@@ -65,6 +65,12 @@ namespace EmailService
             {
                 endpoints.MapControllers();
             });
+
+            using (var serviceScope = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope())
+            {
+                var context = serviceScope.ServiceProvider.GetService <ServiceContext> ();
+                context.Database.Migrate();
+            }
         }
     }
 }
