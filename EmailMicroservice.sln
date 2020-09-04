@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmailService", "EmailServic
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{D1F2342A-5EF0-4FF9-9171-FEB231BDEBBF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Create_Email_Test", "Create_Email_Test\Create_Email_Test.csproj", "{87485D0E-162A-4261-9209-EFB898799912}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Create_Email_Test", "Create_Email_Test\Create_Email_Test.csproj", "{87485D0E-162A-4261-9209-EFB898799912}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmailSendingTest", "EmailSendingTest\EmailSendingTest.csproj", "{D9732307-B32B-4AC8-86E5-9380FF051172}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,12 +25,17 @@ Global
 		{87485D0E-162A-4261-9209-EFB898799912}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87485D0E-162A-4261-9209-EFB898799912}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87485D0E-162A-4261-9209-EFB898799912}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9732307-B32B-4AC8-86E5-9380FF051172}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9732307-B32B-4AC8-86E5-9380FF051172}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9732307-B32B-4AC8-86E5-9380FF051172}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9732307-B32B-4AC8-86E5-9380FF051172}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{87485D0E-162A-4261-9209-EFB898799912} = {D1F2342A-5EF0-4FF9-9171-FEB231BDEBBF}
+		{D9732307-B32B-4AC8-86E5-9380FF051172} = {D1F2342A-5EF0-4FF9-9171-FEB231BDEBBF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B2ED861E-651D-4EA9-B573-1E22E6281A72}

@@ -9,20 +9,18 @@ using Microsoft.EntityFrameworkCore;
 
 namespace EmailService.Database.Handlers
 {
-    internal sealed class GetAllEmailsQueryHandler : IRequestHandler<GetAllEmailsQuery, List<Email>>
+    internal sealed class GetAllEmailsQueryHandler : IRequestHandler<GetAllEmailsQuery, IEnumerable<Email>>
     {
-        private readonly ServiceContext _context;
+        private readonly IEmailRepository _repository;
 
-        public GetAllEmailsQueryHandler(ServiceContext context)
+        public GetAllEmailsQueryHandler(IEmailRepository repository)
         {
-            _context = context;
+            _repository = repository;
         }
 
-        public async Task<List<Email>> Handle(GetAllEmailsQuery request, CancellationToken cancellationToken)
+        public async Task<IEnumerable<Email>> Handle(GetAllEmailsQuery request, CancellationToken cancellationToken)
         {
-            var result = await _context.Emails.AsNoTracking().ToListAsync(cancellationToken);
-
-            return result;
+            return await _repository.GetAllEmails(cancellationToken);
         }
     }
 }

@@ -13,9 +13,9 @@ namespace EmailService.Controllers
     {
         // GET api/<EmailController>/5
         [HttpGet("{id}")]
-        public async Task<IActionResult> Get(int id)
+        public async Task<IActionResult> Get([FromBody] GetEmailDetailsQuery query)
         {
-            return Ok(await Mediator.Send(new GetEmailDetailsQuery()));
+            return Ok(await Mediator.Send(query));
         }
 
         // GET api/<EmailController>/5
@@ -23,6 +23,7 @@ namespace EmailService.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [Route("/[action]")]
         public async Task<IActionResult> GetAll()
         {
             return Ok(await Mediator.Send(new GetAllEmailsQuery()));
@@ -33,6 +34,7 @@ namespace EmailService.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [HttpPost]
+        [Route("/[action]")]
         public async Task<IActionResult> Create([FromBody] CreateEmailRequest command)
         {
             await Mediator.Send(command);
@@ -43,8 +45,9 @@ namespace EmailService.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [HttpPut("{id}")]
-        public async Task<IActionResult> Send([FromBody] SendEmailRequest command)
+        [HttpPut]
+        [Route("/[action]")]
+        public async Task<IActionResult> Send([FromBody] SendPendingEmailsRequest command)
         {
             await Mediator.Send(command);
             return Ok();

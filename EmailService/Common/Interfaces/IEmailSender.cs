@@ -2,8 +2,8 @@
 
 namespace EmailService.Common.Interfaces
 {
-    internal interface IEmailSender
+    public interface IEmailSender
     {
-        bool Send(Email email);
+        bool Send(Email email, ISMTPData credentials);
     }
 }

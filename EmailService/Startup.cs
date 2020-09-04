@@ -18,6 +18,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.OpenApi.Models;
 
 namespace EmailService
 {
@@ -38,8 +39,11 @@ namespace EmailService
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddMediatR(typeof(Startup));
             services.AddSingleton<IEmailSender,EmailSender>();
+            services.AddSingleton<ISMTPData, SMTPData>();
             services.AddSingleton<IMapper<CreateEmailRequest, Email>, CreateEmailRequestToEmailMapper>();
-            services.AddSingleton<IMapper<SendEmailRequest, Email>, SendEmailRequestToEmailMapper>();
+            services.AddScoped<IEmailRepository,EmailRepository>();
+            services.AddSwaggerGen(c =>
+                c.SwaggerDoc("v1", new OpenApiInfo {Title = "Email Microservice", Version = "v1"}));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -50,8 +54,11 @@ namespace EmailService
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseRouting();
+            app.UseSwagger();
+            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Email Microservice"));
 
+            app.UseRouting();
+            
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

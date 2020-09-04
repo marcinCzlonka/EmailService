@@ -9,13 +9,13 @@ namespace EmailService.Common.DataClasses
 {
     public class EmailSender : IEmailSender
     {
-        public bool Send(Email email)
+        public bool Send(Email email, ISMTPData credentials)
         {
             try
             {
                 var message = new MimeMessage();
                 message.From.Add(new MailboxAddress(email.Sender.Name, email.Sender.Value));
-                message.Subject = "How you doin'?";
+                message.Subject = email.Text;
                 foreach (var recipient in email.Recipients)
                 {
                     message.To.Add(new MailboxAddress(recipient.Name, recipient.Value));
@@ -27,10 +27,10 @@ namespace EmailService.Common.DataClasses
 
                     using (var client = new SmtpClient())
                     {
-                        client.Connect("smtp.friends.com", 587, false);
+                        client.Connect(credentials.SMTPAccount, 587, false);
 
                         // Note: only needed if the SMTP server requires authentication
-                        client.Authenticate("joey", "password");
+                        client.Authenticate(credentials.Name, credentials.Password);
 
                         client.Send(message);
                         client.Disconnect(true);

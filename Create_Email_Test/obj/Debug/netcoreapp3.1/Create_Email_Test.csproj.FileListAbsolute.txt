@@ -143,3 +143,7 @@ C:\Users\maco\source\repos\EmailMicroservice\Create_Email_Test\bin\Debug\netcore
 C:\Users\maco\source\repos\EmailMicroservice\Create_Email_Test\obj\Debug\netcoreapp3.1\Create_Email_Test.csproj.CoreCompileInputs.cache
 C:\Users\maco\source\repos\EmailMicroservice\Create_Email_Test\obj\Debug\netcoreapp3.1\Create_Email_Test.dll
 C:\Users\maco\source\repos\EmailMicroservice\Create_Email_Test\obj\Debug\netcoreapp3.1\Create_Email_Test.pdb
+C:\Users\maco\source\repos\EmailMicroservice\Create_Email_Test\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Users\maco\source\repos\EmailMicroservice\Create_Email_Test\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\maco\source\repos\EmailMicroservice\Create_Email_Test\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\maco\source\repos\EmailMicroservice\Create_Email_Test\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
