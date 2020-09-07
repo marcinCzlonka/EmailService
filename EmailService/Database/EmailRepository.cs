@@ -23,7 +23,7 @@ namespace EmailService.Database
         {
             return await  context.Emails.AsNoTracking().SingleOrDefaultAsync(e=>e.Id == id, cancellationToken);
         }
-        public async Task<IEnumerable<Email>> GetAllEmails(CancellationToken cancellationToken)
+        public virtual async Task<IEnumerable<Email>> GetAllEmails(CancellationToken cancellationToken)
         {
             var result = await context.Emails.AsNoTracking().ToListAsync(cancellationToken);
             return result;

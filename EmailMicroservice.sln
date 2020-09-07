@@ -7,9 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmailService", "EmailServic
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{D1F2342A-5EF0-4FF9-9171-FEB231BDEBBF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Create_Email_Test", "Create_Email_Test\Create_Email_Test.csproj", "{87485D0E-162A-4261-9209-EFB898799912}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GetAllEmailsUnitTest", "Create_Email_Test\GetAllEmailsUnitTest.csproj", "{87485D0E-162A-4261-9209-EFB898799912}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmailSendingTest", "EmailSendingTest\EmailSendingTest.csproj", "{D9732307-B32B-4AC8-86E5-9380FF051172}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GetAllEmailsTest", "EmailSendingTest\GetAllEmailsTest.csproj", "{D9732307-B32B-4AC8-86E5-9380FF051172}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
