@@ -8998,19 +8998,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\maco\\.nuget\\packages\\": {}
+    "C:\\Users\\Acer\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\maco\\source\\repos\\EmailMicroservice\\Create_Email_Test\\GetAllEmailsUnitTest.csproj",
+      "projectUniqueName": "C:\\Users\\Acer\\OneDrive\\Dokumenty\\EmailService\\EmailService\\Create_Email_Test\\GetAllEmailsUnitTest.csproj",
       "projectName": "GetAllEmailsUnitTest",
-      "projectPath": "C:\\Users\\maco\\source\\repos\\EmailMicroservice\\Create_Email_Test\\GetAllEmailsUnitTest.csproj",
-      "packagesPath": "C:\\Users\\maco\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\maco\\source\\repos\\EmailMicroservice\\Create_Email_Test\\obj\\",
+      "projectPath": "C:\\Users\\Acer\\OneDrive\\Dokumenty\\EmailService\\EmailService\\Create_Email_Test\\GetAllEmailsUnitTest.csproj",
+      "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Acer\\OneDrive\\Dokumenty\\EmailService\\EmailService\\Create_Email_Test\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\maco\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9018,14 +9018,14 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\source\\nuget_repo": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\maco\\source\\repos\\EmailMicroservice\\EmailService\\EmailService.csproj": {
-              "projectPath": "C:\\Users\\maco\\source\\repos\\EmailMicroservice\\EmailService\\EmailService.csproj"
+            "C:\\Users\\Acer\\OneDrive\\Dokumenty\\EmailService\\EmailService\\EmailService\\EmailService.csproj": {
+              "projectPath": "C:\\Users\\Acer\\OneDrive\\Dokumenty\\EmailService\\EmailService\\EmailService\\EmailService.csproj"
             }
           }
         }
@@ -9038,6 +9038,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Autofac.Extras.Moq": {
             "target": "Package",
@@ -9082,7 +9083,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }
