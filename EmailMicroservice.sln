@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GetAllEmailsUnitTest", "Cre
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GetAllEmailsTest", "EmailSendingTest\GetAllEmailsTest.csproj", "{D9732307-B32B-4AC8-86E5-9380FF051172}"
 EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{DD37FB5B-BF84-4026-B0D5-E66CF6FE4C46}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +31,10 @@ Global
 		{D9732307-B32B-4AC8-86E5-9380FF051172}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9732307-B32B-4AC8-86E5-9380FF051172}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9732307-B32B-4AC8-86E5-9380FF051172}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD37FB5B-BF84-4026-B0D5-E66CF6FE4C46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD37FB5B-BF84-4026-B0D5-E66CF6FE4C46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD37FB5B-BF84-4026-B0D5-E66CF6FE4C46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD37FB5B-BF84-4026-B0D5-E66CF6FE4C46}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

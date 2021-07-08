@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "N4lYpZCG9fZWByLJ6W2KYsT4DLT7NHb8uizB71B729fLXhhODSAlWueqiZ6540uTYAvjWJFTyck1Ng7m2eig5Q==",
+  "dgSpecHash": "5xfFV8oMm6BEduK5nWpz2WA4wnIX2S28J8cSJ+87PIyPtLJ/lJiWCGf00uPdKncLGQa8xisXIFADk38fPlWzkg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Acer\\OneDrive\\Dokumenty\\EmailService\\EmailService\\Create_Email_Test\\GetAllEmailsUnitTest.csproj",
   "expectedPackageFiles": [
@@ -45,6 +45,7 @@
     "C:\\Users\\Acer\\.nuget\\packages\\microsoft.openapi\\1.1.4\\microsoft.openapi.1.1.4.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\microsoft.testplatform.objectmodel\\16.5.0\\microsoft.testplatform.objectmodel.16.5.0.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\microsoft.testplatform.testhost\\16.5.0\\microsoft.testplatform.testhost.16.5.0.nupkg.sha512",
+    "C:\\Users\\Acer\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.9\\microsoft.visualstudio.azure.containers.tools.targets.1.10.9.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\microsoft.win32.registry\\4.5.0\\microsoft.win32.registry.4.5.0.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\mimekit\\2.9.1\\mimekit.2.9.1.nupkg.sha512",
