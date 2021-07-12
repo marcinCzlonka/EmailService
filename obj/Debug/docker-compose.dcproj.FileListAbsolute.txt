@@ -40,3 +40,7 @@ C:\Users\Acer\OneDrive\Dokumenty\EmailService\EmailService\bin\Debug\Microsoft.E
 C:\Users\Acer\OneDrive\Dokumenty\EmailService\EmailService\bin\Debug\System.ComponentModel.Annotations.dll
 C:\Users\Acer\OneDrive\Dokumenty\EmailService\EmailService\bin\Debug\Microsoft.DotNet.PlatformAbstractions.dll
 C:\Users\Acer\OneDrive\Dokumenty\EmailService\EmailService\bin\Debug\Serilog.AspNetCore.dll
+C:\Users\Acer\OneDrive\Dokumenty\EmailService\EmailService\bin\Debug\FluentValidation.AspNetCore.dll
+C:\Users\Acer\OneDrive\Dokumenty\EmailService\EmailService\bin\Debug\FluentValidation.dll
+C:\Users\Acer\OneDrive\Dokumenty\EmailService\EmailService\bin\Debug\Dapper.dll
+C:\Users\Acer\OneDrive\Dokumenty\EmailService\EmailService\bin\Debug\FluentValidation.DependencyInjectionExtensions.dll

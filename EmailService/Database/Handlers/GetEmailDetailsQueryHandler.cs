@@ -20,7 +20,7 @@ namespace EmailService.Database.Handlers
 
         public async Task<Email> Handle(GetEmailDetailsQuery request, CancellationToken cancellationToken)
         {
-            return await _repository.GetEmail(request.Id,cancellationToken);
+            return await _repository.GetEmail(request.Id, cancellationToken);
         }
     }
 }

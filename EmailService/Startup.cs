@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using EmailService.Common;
@@ -9,10 +10,13 @@ using EmailService.Database;
 using EmailService.Database.Entities;
 using EmailService.Database.Queries.Emails;
 using EmailService.Database.Requests.Emails;
+using EmailService.Filters;
+using FluentValidation.AspNetCore;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -35,7 +39,8 @@ namespace EmailService
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            services.AddControllers(options=> { options.Filters.Add<ValidationFilter>(); }).
+                AddFluentValidation(configuration => configuration.RegisterValidatorsFromAssemblyContaining<Startup>());
             services.AddDbContext<ServiceContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddMediatR(typeof(Startup));
@@ -45,6 +50,11 @@ namespace EmailService
             services.AddScoped<IEmailRepository,EmailRepository>();
             services.AddSwaggerGen(c =>
                 c.SwaggerDoc("v1", new OpenApiInfo {Title = "Email Microservice", Version = "v1"}));
+            // Read the connection string from appsettings.
+            string dbConnectionString = this.Configuration.GetConnectionString("DefaultConnection");
+
+            // Inject IDbConnection, with implementation from SqlConnection class.
+            services.AddTransient<IDbConnection>((sp) => new SqlConnection(dbConnectionString));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Dapper;
 using EmailService.Common.Interfaces;
 using EmailService.Database.Entities;
 using Microsoft.EntityFrameworkCore;
@@ -13,15 +15,36 @@ namespace EmailService.Database
     {
         private ServiceContext context;
         private readonly IEmailSender _sender;
-        public EmailRepository(ServiceContext serviceContext, IEmailSender sender)
+        private readonly IDbConnection _dbConnection;
+        public EmailRepository(ServiceContext serviceContext, IEmailSender sender, IDbConnection dbConnection)
         {
             this.context = serviceContext;
             this._sender = sender;
+            this._dbConnection = dbConnection;
+
         }
 
-        public async Task<Email> GetEmail(int id, CancellationToken cancellationToken)
+        public  async Task<Email> GetEmail(int id, CancellationToken cancellationToken)
         {
-            return await  context.Emails.AsNoTracking().SingleOrDefaultAsync(e=>e.Id == id, cancellationToken);
+            var sql = @"SELECT  [Id], 
+                                [Send],
+                                [Text], 
+                                [Priority],
+                                EmailAddress.Value,
+                                EmailAddress.Name,
+                                [Subject]
+                        FROM Emails
+                        LEFT JOIN EmailAddresses Addresses
+                        ON Addresses.Id = Emails.SenderId
+                        where Emails.Id = @Id";
+
+            var dynamicParameters = new DynamicParameters();
+            dynamicParameters.Add("Id", id);
+
+            var result = await this._dbConnection.QueryAsync<Email>(sql, dynamicParameters);
+            return result.FirstOrDefault();
+            
+           // return await  context.Emails.AsNoTracking().SingleOrDefaultAsync(e=>e.Id == id, cancellationToken);
         }
         public virtual async Task<IEnumerable<Email>> GetAllEmails(CancellationToken cancellationToken)
         {
