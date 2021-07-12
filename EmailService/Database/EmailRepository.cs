@@ -27,14 +27,17 @@ namespace EmailService.Database
         {
             var sql = @"SELECT  *
                         FROM Emails
-                        LEFT JOIN EmailAddresses Addresses
-                        ON Addresses.Id = Emails.SenderId
+                        LEFT JOIN EmailAddresses 
+                        ON EmailAddresses.Id = Emails.SenderId
+                        LEFT JOIN Attachments
+                        ON Attachments.Id = Emails.AttachmentId
                         where Emails.Id = @Id";
 
             var dynamicParameters = new DynamicParameters();
             dynamicParameters.Add("Id", id);
 
-            var result = await this._dbConnection.QueryAsync<Email, EmailAddress, Email>(sql, (email,adress)=> { email.Sender = adress; return email; }, dynamicParameters);
+            var result = await this._dbConnection.QueryAsync<Email, Attachment, EmailAddress, Email>
+                (sql, (email,attachment, sender) => { email.Sender = sender;email.Attachment = attachment; return email; }, dynamicParameters);
             return result.FirstOrDefault();
             
            // return await  context.Emails.AsNoTracking().SingleOrDefaultAsync(e=>e.Id == id, cancellationToken);
