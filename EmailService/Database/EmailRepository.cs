@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Threading;
@@ -30,8 +29,6 @@ namespace EmailService.Database
                                 [Send],
                                 [Text], 
                                 [Priority],
-                                EmailAddress.Value,
-                                EmailAddress.Name,
                                 [Subject]
                         FROM Emails
                         LEFT JOIN EmailAddresses Addresses
@@ -41,7 +38,7 @@ namespace EmailService.Database
             var dynamicParameters = new DynamicParameters();
             dynamicParameters.Add("Id", id);
 
-            var result = await this._dbConnection.QueryAsync<Email>(sql, dynamicParameters);
+            var result = await this._dbConnection.QueryAsync<Email, EmailAddress, Email>(sql, (email,adress)=> { email.Sender = adress; return email; }, dynamicParameters);
             return result.FirstOrDefault();
             
            // return await  context.Emails.AsNoTracking().SingleOrDefaultAsync(e=>e.Id == id, cancellationToken);
