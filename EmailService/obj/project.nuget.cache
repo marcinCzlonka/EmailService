@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "/kIBYNXpzA8IZLPr+btCeqYtPsMHuzqaWyGIQq7efjLRD132P/HmWF+LD+cHN4r03unHIj4pBhQlMrSPNynbqg==",
+  "dgSpecHash": "hnXHDMvXT1oPDtLNZMrb4xwt1Dcyjbnx2W5iDGLsIuGQuwPut216w78iIrVtl8gKwg1LzumG5TNOyln5bNVeXw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Acer\\OneDrive\\Dokumenty\\EmailService\\EmailService\\EmailService\\EmailService.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Acer\\.nuget\\packages\\fluentvalidation\\10.3.0\\fluentvalidation.10.3.0.nupkg.sha512",
+    "C:\\Users\\Acer\\.nuget\\packages\\fluentvalidation.aspnetcore\\10.3.0\\fluentvalidation.aspnetcore.10.3.0.nupkg.sha512",
+    "C:\\Users\\Acer\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\10.3.0\\fluentvalidation.dependencyinjectionextensions.10.3.0.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\mailkit\\2.13.0\\mailkit.2.13.0.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512",

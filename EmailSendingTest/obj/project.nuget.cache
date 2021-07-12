@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "8wji7lMNUN1P+B9lgnQoPWhdMN3s+SvFvQEr7pNzOuxEPLAAGqboiCoVgfQ9NanRcq4wsMFwW+zEO0l+WP9CYQ==",
+  "dgSpecHash": "kPAX+zhc3TDcpkCXwPnb5YFEIOZXHLuuNyt9QKKDhDHmV9USxSt2r5beJxZ2Zzf4ST4tFlK5iHH4WLrh9m0z6A==",
   "success": true,
   "projectFilePath": "C:\\Users\\Acer\\OneDrive\\Dokumenty\\EmailService\\EmailService\\EmailSendingTest\\GetAllEmailsTest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Acer\\.nuget\\packages\\coverlet.collector\\1.2.0\\coverlet.collector.1.2.0.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\fluentassertions\\5.10.3\\fluentassertions.5.10.3.nupkg.sha512",
+    "C:\\Users\\Acer\\.nuget\\packages\\fluentvalidation\\10.3.0\\fluentvalidation.10.3.0.nupkg.sha512",
+    "C:\\Users\\Acer\\.nuget\\packages\\fluentvalidation.aspnetcore\\10.3.0\\fluentvalidation.aspnetcore.10.3.0.nupkg.sha512",
+    "C:\\Users\\Acer\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\10.3.0\\fluentvalidation.dependencyinjectionextensions.10.3.0.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\mailkit\\2.13.0\\mailkit.2.13.0.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\9.0.0\\mediatr.extensions.microsoft.dependencyinjection.9.0.0.nupkg.sha512",
