@@ -1,8 +1,9 @@
-﻿namespace EmailService.Domain.Entities
+﻿using EmailService.Shared_Kernel;
+
+namespace EmailService.Domain.Entities
 {
-    public class EmailAddress
+    public class EmailAddress : Entity
     {
-        public int Id { get; set; }
         public string Value { get; set; }
         public string Name { get; set; }
     }

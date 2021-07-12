@@ -22,7 +22,7 @@ namespace EmailService.Filters
                 {
                     foreach(var subError in error.Value)
                     {
-                        var errorModel = new ErroModel()
+                        var errorModel = new ErrorModel()
                         {
                             FieldName = error.Key,
                             Message = subError

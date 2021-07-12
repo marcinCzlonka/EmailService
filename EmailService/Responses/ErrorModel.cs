@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace EmailService.Responses
 {
-    public class ErroModel
+    public class ErrorModel
     {
         public string FieldName { get; set; }
 

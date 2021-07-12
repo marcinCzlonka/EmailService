@@ -7,6 +7,6 @@ namespace EmailService.Responses
 {
     public class ErrorResponse
     {
-        public List<ErroModel> Errors { get; set; } = new List<ErroModel>();
+        public List<ErrorModel> Errors { get; set; } = new List<ErrorModel>();
     }
 }
