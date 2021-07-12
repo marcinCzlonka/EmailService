@@ -25,11 +25,7 @@ namespace EmailService.Database
 
         public  async Task<Email> GetEmail(int id, CancellationToken cancellationToken)
         {
-            var sql = @"SELECT  [Id], 
-                                [Send],
-                                [Text], 
-                                [Priority],
-                                [Subject]
+            var sql = @"SELECT  *
                         FROM Emails
                         LEFT JOIN EmailAddresses Addresses
                         ON Addresses.Id = Emails.SenderId
