@@ -1,8 +1,6 @@
-﻿using System.Linq;
-using System.Threading;
+﻿using System.Threading;
 using System.Threading.Tasks;
 using EmailService.Common.Interfaces;
-using EmailService.Database.Entities;
 using EmailService.Database.Requests.Emails;
 using MediatR;
 

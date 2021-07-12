@@ -1,4 +1,4 @@
-﻿namespace EmailService.Database.Entities
+﻿namespace EmailService.Domain.Entities
 {
     public class EmailAddress
     {

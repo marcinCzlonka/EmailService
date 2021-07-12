@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Net.Mail;
 using EmailService.Common.Interfaces;
-using EmailService.Database.Entities;
+using EmailService.Domain.Entities;
 using MimeKit;
 using SmtpClient = MailKit.Net.Smtp.SmtpClient;
 

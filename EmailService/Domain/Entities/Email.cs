@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using EmailService.Database.Enums;
 
-namespace EmailService.Database.Entities
+namespace EmailService.Domain.Entities
 {
     public class Email
     {

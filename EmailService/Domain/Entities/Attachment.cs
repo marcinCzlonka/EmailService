@@ -1,6 +1,6 @@
 ﻿using Org.BouncyCastle.Utilities.Encoders;
 
-namespace EmailService.Database.Entities
+namespace EmailService.Domain.Entities
 {
     public class Attachment
     {

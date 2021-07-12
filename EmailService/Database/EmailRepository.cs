@@ -6,7 +6,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Dapper;
 using EmailService.Common.Interfaces;
-using EmailService.Database.Entities;
+using EmailService.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace EmailService.Database

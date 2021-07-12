@@ -1,4 +1,4 @@
-﻿using EmailService.Database.Entities;
+﻿using EmailService.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace EmailService.Database

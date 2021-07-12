@@ -1,4 +1,4 @@
-﻿using EmailService.Database.Entities;
+﻿using EmailService.Domain.Entities;
 using MediatR;
 
 namespace EmailService.Database.Queries.Emails

@@ -1,5 +1,5 @@
 ﻿using EmailService.Common.Interfaces;
-using EmailService.Database.Entities;
+using EmailService.Domain.Entities;
 
 namespace EmailService.Database.Requests.Emails
 {

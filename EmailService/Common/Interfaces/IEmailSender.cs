@@ -1,4 +1,4 @@
-﻿using EmailService.Database.Entities;
+﻿using EmailService.Domain.Entities;
 
 namespace EmailService.Common.Interfaces
 {

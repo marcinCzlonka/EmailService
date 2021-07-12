@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using EmailService.Common.Interfaces;
-using EmailService.Database.Entities;
+using EmailService.Domain.Entities;
 using EmailService.Database.Enums;
 using MediatR;
 

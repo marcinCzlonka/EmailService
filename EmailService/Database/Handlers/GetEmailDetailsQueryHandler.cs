@@ -2,7 +2,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 using EmailService.Common.Interfaces;
-using EmailService.Database.Entities;
+using EmailService.Domain.Entities;
 using EmailService.Database.Queries.Emails;
 using MediatR;
 using Microsoft.EntityFrameworkCore;

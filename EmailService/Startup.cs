@@ -7,7 +7,7 @@ using EmailService.Common;
 using EmailService.Common.DataClasses;
 using EmailService.Common.Interfaces;
 using EmailService.Database;
-using EmailService.Database.Entities;
+using EmailService.Domain.Entities;
 using EmailService.Database.Queries.Emails;
 using EmailService.Database.Requests.Emails;
 using EmailService.Filters;

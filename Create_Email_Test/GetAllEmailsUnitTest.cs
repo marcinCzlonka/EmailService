@@ -3,7 +3,7 @@ using System.Linq;
 using System.Threading;
 using Autofac.Extras.Moq;
 using EmailService.Common.Interfaces;
-using EmailService.Database.Entities;
+using EmailService.Domain.Entities;
 using EmailService.Database.Enums;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
